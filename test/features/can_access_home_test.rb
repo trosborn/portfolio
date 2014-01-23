@@ -7,3 +7,5 @@ feature "CanAccessHome" do
     page.wont_have_content "Goobye All!"
   end
 end
+
+#yolo
