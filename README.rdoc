@@ -1,6 +1,6 @@
 == README
 
-[![Build Status](https://travis-ci.org/trosborn/portfolio.png?branch=master)](https://travis-ci.org/trosborn/portfolio)
+{<img src="https://travis-ci.org/trosborn/portfolio.png?branch=master" alt="Build Status" />}[https://travis-ci.org/trosborn/portfolio]
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
