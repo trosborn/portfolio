@@ -1,8 +1,8 @@
 language: ruby
 rvm:
-  - 2.0.0
-
+- 2.0.0
 deploy:
   provider: heroku
   app: obscure-crag-6658
-  api_key: adaa30cc496a263b040db172aa9e2b1e0da82fd9
+  api_key:
+    secure: dH+6weCh+B+FqTkHSqcnb5DmprIaNLaJWlSqtLHTZ7eM2IiStVMcTJ2BOHF/X9DSb89x/S5g6SAxdqTsnCSA+LyFeqTHtZLzAYeu+tYozTay3DqOzaWgQFIYX4az/fa2VluNX7SXOO9WgIV2WQKok3Wg/tXoDaPm8aL23hMUSmQ=
