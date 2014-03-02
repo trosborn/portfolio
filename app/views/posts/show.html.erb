@@ -5,6 +5,11 @@
   <%= @post.title %>
 </p>
 
+<p id="author">
+  <b>By:</b>
+  <%=@post.author.email %>
+</p>
+
 <p>
   <strong>Body:</strong>
   <%= @post.body %>
