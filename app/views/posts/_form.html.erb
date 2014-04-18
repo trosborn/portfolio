@@ -22,4 +22,15 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <% if policy(@post).publish? %>
+    <div class="row collapse">
+      <div class="small-3 columns">
+        <%= f.label :published, class: "right inline", title: "is this post published?", data: { tooltip: true } %><br>
+      </div>
+
+      <div class="small-9 columns">
+        <%= f.check_box :published %>
+      </div>
+    </div>
+  <% end %>
 <% end %>

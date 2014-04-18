@@ -2,3 +2,10 @@ poopin:
   title: "poopin'"
   body: "poopin'"
   author: thomas
+  published: true
+
+author_test:
+  title: "yolo"
+  body: "nolo"
+  author: author
+  published: true
