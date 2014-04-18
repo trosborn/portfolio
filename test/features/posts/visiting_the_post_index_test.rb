@@ -3,7 +3,7 @@ require "test_helper"
 feature "Visiting the post index" do
   scenario "with existing posts" do
     #Given existing posts
-    Post.create(title: "Becoming a Code Fellow", body: "Means striving for excellence.")
+    Post.create(title: "Becoming a Code Fellow", body: "Means striving for excellence.", published: true)
     #When I visit posts
     visit posts_path
     #Then the existing posts should be loaded

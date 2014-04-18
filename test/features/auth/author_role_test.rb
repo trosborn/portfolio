@@ -4,7 +4,6 @@ feature "As a post author" do
 
   before do
     @author = users(:author)
-    @not_author = users(:thomas)
 
     sign_in(:author)
   end
