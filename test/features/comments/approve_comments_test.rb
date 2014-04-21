@@ -1,18 +1,25 @@
 require "test_helper"
 
-feature "Comments::ApproveComments" do
-  scenario "the test is sound" do
-    sign_in
+feature "I want to approve comments" do
+  before do
+    visit post_path(posts(:approve_comment))
+    fill_in :comment_author, with: "Mark Twain"
+    fill_in :comment_author_url, with: "marktwain.com"
+    fill_in :comment_author_email, with: "mark@twain.com"
+    fill_in :comment_content, with: "To succeed in life, you need two things: ignorance and confidence."
+    click_on  "Submit comment"
+  end
 
-    post = posts(:poopin)
-    visit post_path(post)
-    page.must_have_content 'unapproved comments'
+  scenario "comments do not display whilst unapproved" do
+    visit post_path(posts(:approve_comment))
+    page.wont_have_content "To succeed in life"
+  end
 
-    click_on 'Approve comment'
-
-    page.must_have_content 'approved'
-
-    visit post_comments_path(post)
-    page.must_have_content 'Approved'
+  scenario "approve comments" do
+    sign_in(:editor)
+    visit comments_path
+    click_on "Approve"
+    visit post_path(posts(:approve_comment))
+    page.must_have_content "To succeed in life"
   end
 end
