@@ -17,9 +17,8 @@ feature "I want to approve comments" do
 
   scenario "approve comments" do
     sign_in(:editor)
-    visit comments_path
+    visit post_comments_path(posts(:approve_comment))
     click_on "Approve"
-    visit post_path(posts(:approve_comment))
     page.must_have_content "To succeed in life"
   end
 end

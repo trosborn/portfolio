@@ -9,3 +9,9 @@ author_test:
   body: "nolo"
   author: author
   published: true
+
+approve_comment:
+  title: "approve this komment"
+  body: "blahdiddly blah blah"
+  author: author
+  published: true
