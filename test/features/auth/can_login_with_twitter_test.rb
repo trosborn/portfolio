@@ -12,10 +12,6 @@ feature "Can login with Twitter" do
                           uid: '12345',
                           })
     click_on "Sign In With Twitter"
-    fill_in "Email", with: "test@email.com"
-    fill_in "Password", with: "password"
-    fill_in "Password confirmation", with: "password"
-    click_on "Sign up"
 
   #  save_and_open_page
 
