@@ -1,9 +1,11 @@
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Edit sign up', edit_user_registration_path) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Sign Up', new_user_registration_path)  %>
-  </li>
-<% end %>
+ <div id="user_nav">
+  <% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path %> |
+    <%= link_to "Sign out", destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign Up", new_user_registration_path %> |
+    <%= link_to "Login", new_user_session_path %> |
+    <%= link_to "Sign In With Twitter", user_omniauth_authorize_path(:twitter) %>
+  <% end %>
+</div>

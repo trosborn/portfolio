@@ -21,5 +21,6 @@ feature "Creating a post" do
 
     page.has_css? "#author"
     page.text.must_include users(:thomas).email
+    page.text.must_include "Status: Unpublished"
   end
 end

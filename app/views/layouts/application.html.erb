@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
   <head>
-  	<meta charset="utf-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-  	<%= stylesheet_link_tag    "application" %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "UW Portfolio" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-
-
-
-    <ul class="hmenu">
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
-    </ul>
-
-
-
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Thomas Osborn's Portfolio", posts_path %></a></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "Browse Posts", posts_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Portfolio", projects_path %></li>
+          <li class="divider"></li>
+          <% if current_user.present? %>
+            <li><%= link_to "Sign out", destroy_user_session_path %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Sign In With Twitter", user_omniauth_authorize_path(:twitter) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
     <% flash.each do |key, value| %>
-      <div class="alert-box round <%= flash_class(key) %>">
-        <%=value %>
+      <div class="row">
+        <div class="large-8 columns">
+          <div data-alert class="alert-box round <%= flash_class(key) %>">
+            <%= value %>
+          </div>
+        </div>
       </div>
     <% end %>
-
-    <%= yield %>
+    <div class="row">
+      <div class="large-8 columns">
+        <%= yield %>
+      </div>
+      <div class="large-4 columns">
+        <h2 class="subheader">About Us</h2>
+      </div>
+    </div>
   </body>
 </html>
