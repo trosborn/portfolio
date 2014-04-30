@@ -1,0 +1,10 @@
+<h1>Approve comments</h1>
+<% @comments.each do |comment| %>
+  <%= comment.content %>
+  <%= link_to 'Edit', edit_comments_path(comment), class: "btn btn-info" %>
+  <% if comment.approved? %>
+    <h2> Comment approved by post author %>
+  <% else %>
+     <%= button_to 'Approve', post_comment_path(@commentable, comment, comment: {approved: true}), method: :put, class: 'comment_approve'%>
+  <% end %>
+<% end %>
