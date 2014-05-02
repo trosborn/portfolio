@@ -16,4 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ajaxError((event, xhr, settings, exception) -> alert xhr.responseText)
+
+
 $(function(){ $(document).foundation(); });
