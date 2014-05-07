@@ -17,8 +17,8 @@ class ProjectsController < ApplicationController
           flash[:notice] = "Project has been created."
           redirect_to @project
         else
-          flash[:alert] =  "Project could not be saved."
-          render :action => "new"
+          flash.now[:error] =  "Project could not be saved."
+          render :new
         end
       end
       format.js do
@@ -38,14 +38,19 @@ class ProjectsController < ApplicationController
   def update
     if @project.update_attributes(project_params)
       redirect_to @project, notice: 'Project was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
-    @project.destroy
-    respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.json { head :no_content }
+    if @project.destroy
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Project was successfully deleted"
+          redirect_to projects_path
+        end
+      end
     end
   end
 
