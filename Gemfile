@@ -13,6 +13,8 @@ gem 'minitest-rails'
 
 gem 'foundation-rails', '5.0.2'
 
+gem 'postmark-mitt'
+
 gem 'devise'
 
 gem 'omniauth-twitter'
