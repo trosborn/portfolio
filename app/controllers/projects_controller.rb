@@ -50,6 +50,7 @@ class ProjectsController < ApplicationController
           flash[:notice] = "Project was successfully deleted"
           redirect_to projects_path
         end
+        format.js
       end
     end
   end
