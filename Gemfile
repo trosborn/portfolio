@@ -9,6 +9,8 @@ group :test do
   gem "launchy"
 end
 
+gem 'rake', '10.3.2'
+
 gem 'minitest-rails'
 
 gem 'foundation-rails', '5.0.2'
