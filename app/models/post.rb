@@ -5,4 +5,6 @@ class Post < ActiveRecord::Base
 
   scope :published, -> { where(published: true) }
 
+  mount_uploader :image, ImageUploader
+
 end

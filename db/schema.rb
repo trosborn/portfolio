@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422230605) do
+ActiveRecord::Schema.define(version: 20140529032352) do
 
   create_table "comments", force: true do |t|
     t.string   "author"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20140422230605) do
     t.string   "commentable_type"
   end
 
+  create_table "messages", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
@@ -35,6 +43,7 @@ ActiveRecord::Schema.define(version: 20140422230605) do
     t.datetime "updated_at"
     t.integer  "author_id"
     t.boolean  "published"
+    t.string   "image"
   end
 
   create_table "projects", force: true do |t|
@@ -61,6 +70,7 @@ ActiveRecord::Schema.define(version: 20140422230605) do
     t.string   "provider"
     t.string   "uid"
     t.string   "username"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

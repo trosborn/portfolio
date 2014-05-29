@@ -19,6 +19,8 @@ gem 'omniauth-twitter'
 
 gem 'pundit'
 
+gem 'mini_magick'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -57,6 +59,11 @@ group :production do
   gem 'pg'
 end
 ruby "2.0.0"
+
+gem 'carrierwave'
+gem 'fog'
+
+gem 'rake', '10.3.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

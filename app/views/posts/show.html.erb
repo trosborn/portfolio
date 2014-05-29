@@ -20,6 +20,9 @@
   <%= @post.published? ? "Published" : "Unpublished" %>
 </p>
 
+<p>
+  <%= image_tag @post.image_url.to_s %>
+</p>
 
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
