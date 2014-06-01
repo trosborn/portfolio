@@ -13,6 +13,8 @@ gem 'minitest-rails'
 
 gem 'foundation-rails', '5.0.2'
 
+gem 'postmark-mitt'
+
 gem 'devise'
 
 gem 'omniauth-twitter'
@@ -46,6 +48,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'figaro'
+
+gem 'postmark-mitt'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

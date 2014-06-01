@@ -66,6 +66,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    json_pure (1.8.1)
     launchy (2.4.2)
       addressable (~> 2.3)
     mail (2.5.4)
@@ -107,6 +108,9 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
+    postmark-mitt (0.0.11)
+      json_pure
+      multi_json
     pundit (0.2.3)
       activesupport (>= 3.0.0)
     rack (1.5.2)
@@ -184,6 +188,7 @@ DEPENDENCIES
   minitest-rails-capybara
   omniauth-twitter
   pg
+  postmark-mitt
   pundit
   rails (= 4.0.2)
   rails_12factor
