@@ -23,8 +23,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'figaro'
-
+gem 'letter_opener', :group => :development
 gem 'postmark-mitt'
+gem "sidekiq"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
