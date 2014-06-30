@@ -1,0 +1,26 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.myhead{
+margin-top: -50px; padding-top: 200px;  padding-bottom: 50px;
+ background: url("background.jpg") no-repeat;  background-size: 100%; background-position: center center;
+}
+
+.myhead h1, .myhead h4 { color: #FFF;
+}
+
+.dark{
+  background-color: #212D48;
+  padding: 20px 0 10px 0;
+}
+.lightT{
+  color: #9CF;
+}
+
+.main{
+  padding: 10px 0 20px 0;
+}
+.color{
+  background-color: #c9c1d4;
+}
