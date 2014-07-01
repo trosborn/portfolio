@@ -1,10 +1,12 @@
 language: ruby
 rvm:
 - 2.0.0
-S3_KEY:
-S3_SECRET:
 deploy:
   provider: heroku
   app: obscure-crag-6658
   api_key:
     secure: dH+6weCh+B+FqTkHSqcnb5DmprIaNLaJWlSqtLHTZ7eM2IiStVMcTJ2BOHF/X9DSb89x/S5g6SAxdqTsnCSA+LyFeqTHtZLzAYeu+tYozTay3DqOzaWgQFIYX4az/fa2VluNX7SXOO9WgIV2WQKok3Wg/tXoDaPm8aL23hMUSmQ=
+env:
+  global:
+  - secure: V7lIEMJ2tbBpNbmlsXt4c7s7V1floyZY/etYXr6ea217WpdLsi7H0YjOazSfTzbculGdV73+fWb1LnmqJfRAJYJuCuOudiNXYXbEWpclE3mSAy9yCx+p0eW4r9zfMjoZmkvy8+SD1MdxVZ8/j5aBKlytQE1DsHNCtHC4Mbg1D5k=
+  - secure: RjObZsFJBm7OvwF0XCpfAwlK3LGSXd0LLAYiCjN7fXFV2aly3ukGR0m81R8tRivLnx+Qd6SFqhUSjXmJfgQXY0qSJsqGssNmFU1z42yVSgwmjsKlooEP02TvNIzBG/s2xvDD6/O6ONO285TCxNPeoXJVSnOk9gH4+h6GSKSNYH0=
