@@ -9,6 +9,8 @@ group :test do
   gem "launchy"
 end
 
+gem 'rake', '10.3.2'
+
 gem 'minitest-rails'
 gem 'foundation-rails', '5.0.2'
 gem 'devise'
@@ -22,10 +24,13 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+<<<<<<< HEAD
 gem 'figaro'
 gem 'letter_opener', :group => :development
 gem 'postmark-mitt'
 gem "sidekiq"
+=======
+>>>>>>> polymorphic
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
