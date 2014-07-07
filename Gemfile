@@ -9,13 +9,12 @@ group :test do
   gem "launchy"
 end
 
-gem 'rake', '10.3.2'
-
 gem 'minitest-rails'
 gem 'foundation-rails', '5.0.2'
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'pundit'
+gem 'mini_magick'
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -29,7 +28,6 @@ gem 'postmark-mitt'
 gem "sidekiq"
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
@@ -38,3 +36,8 @@ group :production do
   gem 'pg'
 end
 ruby "2.0.0"
+
+gem 'carrierwave'
+gem 'fog'
+
+gem 'rake', '10.3.2'

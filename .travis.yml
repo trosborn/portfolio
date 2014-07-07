@@ -6,3 +6,7 @@ deploy:
   app: obscure-crag-6658
   api_key:
     secure: dH+6weCh+B+FqTkHSqcnb5DmprIaNLaJWlSqtLHTZ7eM2IiStVMcTJ2BOHF/X9DSb89x/S5g6SAxdqTsnCSA+LyFeqTHtZLzAYeu+tYozTay3DqOzaWgQFIYX4az/fa2VluNX7SXOO9WgIV2WQKok3Wg/tXoDaPm8aL23hMUSmQ=
+env:
+  global:
+  - secure: ZzmdJIgzqLPJh7U1PS0hGi9aSmOC5yzt/RgqLZ7LpB5xKmJNxyD+4nF8nCdFzv6q7v3Osf0xWHHQp2B2dUUre8h7kcKfy7Xx5qChRTzKGn86WzDx1qNG9lXYxbOa8mhL/m+XCD/No3vS8eEYqNubu3nhRLIXa8OzYnzDjw7uuAw=
+  - secure: SKid/Nvf3u9xBvInsKk0vxIpPBWjqRV58qWdBJhGLi4odfsRFbl9Y997T3IT3YSOriyraLHIomCZ8NjUXeIi7EfzshYvLEciBFYqmp0fEfhuND/ghrwNUQKOqvOom+t0yDn7oFyDUaNqgBoIBN3GVfRIZHl3bU5djkFd1oAJHUs=

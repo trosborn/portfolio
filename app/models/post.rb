@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
 
   scope :published, -> { where(published: true) }
 
+  mount_uploader :image, ImageUploader
+
   def self.create_from_postmark mitt
     api_token = mitt.from #.split("@").first.split("+").last
     user = User.find_by_email(api_token)
