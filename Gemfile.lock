@@ -231,8 +231,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   launchy
-  mini_magick
   letter_opener
+  mini_magick
   minitest-rails
   minitest-rails-capybara
   omniauth-twitter
