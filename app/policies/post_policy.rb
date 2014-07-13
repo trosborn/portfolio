@@ -1,16 +1,15 @@
 class PostPolicy < ApplicationPolicy
   attr_accessor :user, :post
 
-  Scope = Struct.new(:user, :scope) do
+  class Scope < Struct.new(:user, :scope)
     def resolve
-      if user
-        if user.author?
-          return scope.where(author_id: user.id)
-        elsif user.editor?
-          scope.all
-        end
+      if user.editor?
+        scope.all
+      elsif user.author?
+        scope.where(author_id: user.id) | scope.where(published: true)
+      else
+        scope.where(published: true)
       end
-      scope.where(published: true)
     end
   end
 

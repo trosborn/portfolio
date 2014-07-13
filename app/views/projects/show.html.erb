@@ -1,3 +1,16 @@
 <h2><%= @project.name %></h2>
 <p>Technologies used: <%= @project.technologies_used %>
-<%= link_to "Destroy", @project, method: :delete, data: {confirm: "Are you sure?"} %>
+
+<h2>Comments</h2>
+<% @project.comments.each do |comment| %>
+  <p>
+    <% if comment.approved? %>
+      <% comment.content %>
+    <% end %>
+  </p>
+<% end %>
+
+<%= render "comments/form" %>
+
+<%= link_to "Destroy", @project, method: :delete, data: {confirm: "Click to confirm deletion"} %>
+>>>>>>> polymorphic
