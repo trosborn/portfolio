@@ -39,13 +39,12 @@
         </li>
         <li class="divider"></li>
         <li class="has-dropdown">
-          <a href="#">Blog</a>
-          <ul class="dropdown">
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
+          <a href="#" data-dropdown="drop2">Blog</a>
+          <ul id="drop2" class="f-dropdown" data-dropdown-content>
+            <li>
+            <%= link_to "Index", posts_path %>
+            </li>
             <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
         </li>
       </ul>
         <li class="divider"></li>
