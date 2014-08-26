@@ -25,7 +25,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'figaro'
 gem 'letter_opener', :group => :development
 gem 'postmark-mitt'
-gem "sidekiq"
+gem 'sidekiq'
+gem 'font-awesome-rails'
 
 group :doc do
   gem 'sdoc', require: false

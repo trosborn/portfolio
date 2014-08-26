@@ -11,73 +11,9 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <!-- Navigation -->
-
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1>
-          <li><%= link_to "Home", welcome_index_path %></li>
-        </h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#" data-dropdown="drop1">Links</a>
-            <ul id="drop1" class="f-dropdown" data-dropdown-content>
-              <li><a href="#">Résumé</a></li>
-              <li><a href="http://www.github.com/trosborn">Github</a></li>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="https://twitter.com/joosushi">Twitter</a></li>
-            </ul>
-        </li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#" data-dropdown="drop2">Blog</a>
-          <ul id="drop2" class="f-dropdown" data-dropdown-content>
-            <li>
-            <%= link_to "Index", posts_path %>
-            </li>
-            <li class="divider"></li>
-        </li>
-      </ul>
-        <li class="divider"></li>
-        <li><a href="#">Contact Me</a></li>
-        <li class="divider"></li>
-        <li><% if user_signed_in? %>
-        <a href="#"><%= current_user.email %></a>
-        <% else %>
-        <%= link_to "Register", new_user_registration_path %>
-        <% end %></li>
-        <li class="divider"></li>
-        <li><% if user_signed_in? %>
-        <%= link_to "Sign Out", destroy_user_session_path %>
-        <% else %>
-       <li><%= link_to "Sign In", new_user_session_path %></li>
-       <% end %></li>
-    </section>
-  </nav>
-
   <body>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
-    <div class="dark">
-      <footer class="row">
-      <div class="large-12 columns">
-        <div class="row">
-          <div class="large-6 columns">
-            <p class="lightT">&copy; Thomas</p>
-          </div>
-        </div>
-      </div>
-      </footer>
-    </div>
   </body>
 </html>
