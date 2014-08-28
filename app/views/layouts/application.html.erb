@@ -4,16 +4,51 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "UW Portfolio" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "About", welcome_index_path %></a></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><% link_to "Contact", contact_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Blog", posts_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Portfolio", projects_path %></li>
+          <li class="divider"></li>
+          <% if current_user.present? %>
+            <li><%= link_to "Sign out", destroy_user_session_path %></li>
+          <% else %>
+            <li><%= link_to "Login", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <% flash.each do |key, value| %>
+      <div class="row">
+        <div class="large-8 columns">
+          <div data-alert class="alert-box round <%= flash_class(key) %>">
+            <%= value %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="row">
+      <div class="large-8 columns">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
