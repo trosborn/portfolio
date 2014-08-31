@@ -144,6 +144,8 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
+    pony (1.10)
+      mail (>= 2.0)
     postmark-mitt (0.0.11)
       json_pure
       multi_json
@@ -240,6 +242,7 @@ DEPENDENCIES
   minitest-rails-capybara
   omniauth-twitter
   pg
+  pony
   postmark-mitt
   pundit
   rails (= 4.0.2)
