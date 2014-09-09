@@ -13,29 +13,26 @@
   </head>
 
   <body>
-    <nav class="top-bar">
-      <ul class="title-area">
-        <li class="name">
-          <h1><%= link_to "About", welcome_index_path %></a></h1>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <ul class="right">
-          <li class="divider"></li>
-         <!-- <li><%# link_to "Contact", contact_path %></li> -->
-          <li class="divider"></li>
-          <li><%= link_to "Blog", posts_path %></li>
-          <li class="divider"></li>
-          <li><%= link_to "Portfolio", projects_path %></li>
-          <li class="divider"></li>
+    <div class="row">
+      <div class="large-3 columns">
+        <ul>
+          <li><%= link_to "Home", welcome_index_path, class: "button" %></li>
+        </ul>
+    </div>
+    <div class="large-9 columns">
+      <div class="nav-bar-right">
+        <ul class="right button-group">
+          <li><%= link_to "Contact", new_inquiry_path, class: "button" %></li>
+          <li><%= link_to "Blog", posts_path, class: "button" %></li>
+          <li><%= link_to "Portfolio", projects_path, class: "button" %></li>
           <% if current_user.present? %>
-            <li><%= link_to "Sign out", destroy_user_session_path %></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, class: "button" %></li>
           <% else %>
-            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Login", new_user_session_path, class: "button" %></li>
           <% end %>
         </ul>
       </div>
-    </nav>
+    </div>
     <% flash.each do |key, value| %>
       <div class="row">
         <div class="large-8 columns">
@@ -46,7 +43,7 @@
       </div>
     <% end %>
     <div class="row">
-      <div class="large-8 columns">
+      <div class="large-12 columns">
         <%= yield %>
       </div>
     </div>
