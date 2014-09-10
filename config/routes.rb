@@ -18,9 +18,9 @@ Portfolio::Application.routes.draw do
     resources :comments
   end
 
-  resources :inquiries, :only => [:new, :create] do
-    get 'thank_you', :on => :collection
-  end
+  match '/contacts', to: 'contacts#new', via: 'get'
+
+  resources 'contacts', only: [:new, :create]
 
   resource :comments
 
