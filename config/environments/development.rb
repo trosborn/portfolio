@@ -10,7 +10,7 @@ Portfolio::Application.configure do
   config.active_record.migration_error = :page_load
   config.assets.debug = true
   config.action_mailer.smtp_settings = {
-    address: “smtp.gmail.com”,
+    address: 'smtp.gmail.com',
     port: 587,
     domain: ENV["GMAIL_DOMAIN"],
     authentication: “plain”,
