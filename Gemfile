@@ -27,7 +27,8 @@ gem 'letter_opener', :group => :development
 gem 'postmark-mitt'
 gem 'sidekiq'
 gem 'font-awesome-rails'
-gem 'pony'
+gem 'mail_form'
+gem 'simple_form'
 
 group :doc do
   gem 'sdoc', require: false
