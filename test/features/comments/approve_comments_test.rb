@@ -1,5 +1,6 @@
 require "test_helper"
 
+=begin
 feature "I want to approve comments" do
   before do
     visit post_path(posts(:approve_comment))
@@ -22,3 +23,4 @@ feature "I want to approve comments" do
     page.must_have_content "To succeed in life"
   end
 end
+=end
