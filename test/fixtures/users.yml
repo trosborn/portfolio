@@ -1,5 +1,5 @@
 thomas:
-  email: "email@example.com"
+  email: email@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
 
 author:
@@ -11,3 +11,8 @@ editor:
   email: editor@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
   role: editor
+
+admin:
+  email: admin@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: admin
