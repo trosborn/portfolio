@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "Can login with Twitter" do
   scenario "sign in with twitter works" do

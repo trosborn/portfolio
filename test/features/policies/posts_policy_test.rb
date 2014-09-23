@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "Pundit limits post privileges to admin" do
   scenario "admin can create posts" do

@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "Commenting on a portfolio project" do
   scenario "unverified users are prompted to sign in to comment" do

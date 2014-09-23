@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "new post button is hidden from visitors" do
   scenario "as an unauthenticted visitor, I cannot see new post button" do

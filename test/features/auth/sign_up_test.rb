@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "I want to sign up for an account" do
   scenario "sign up" do

@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "Check for Zurb" do
   scenario "have Zurb running as front end framework" do
