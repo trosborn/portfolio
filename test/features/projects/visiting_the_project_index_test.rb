@@ -1,10 +1,13 @@
 require "test_helper"
 
-feature "as a developer I want to show all my posts in one page" do
-  scenario "with existing projects" do
-
+feature "new project button is hidden from visitors" do
+  scenario "as an unauthenticted visitor, I cannot see new project button" do
     visit projects_path
-    page.text.must_include "Barnyard Cereal"
-    page.text.must_include "Ruby, Rails"
+    page.wont_have_link "New Project"
+  end
+  scenario "as an unauthenicated visitor, I cannot access the new posts path" do
+    visit new_project_path
+
+    page.must_have_content "Sign in"
   end
 end

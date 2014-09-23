@@ -1,9 +1,9 @@
 require "test_helper"
 
-=begin
-feature "I want to approve comments" do
+feature "Comment approval" do
   before do
-    visit post_path(posts(:approve_comment))
+    sign_in
+    visit post_path(posts(:aminoize))
     fill_in :comment_author, with: "Mark Twain"
     fill_in :comment_author_url, with: "marktwain.com"
     fill_in :comment_author_email, with: "mark@twain.com"
@@ -11,16 +11,18 @@ feature "I want to approve comments" do
     click_on  "Submit comment"
   end
 
-  scenario "comments do not display whilst unapproved" do
-    visit post_path(posts(:approve_comment))
+  scenario "comments do not display while unapproved" do
+    visit post_path(posts(:aminoize))
+
     page.wont_have_content "To succeed in life"
   end
 
-  scenario "approve comments" do
-    sign_in(:editor)
-    visit post_comments_path(posts(:approve_comment))
+  scenario "comments are displayed after approval" do
+    click_on "Sign out"
+    sign_in(:admin)
+    visit post_comments_path(posts(:aminoize))
     click_on "Approve"
+
     page.must_have_content "To succeed in life"
   end
 end
-=end
