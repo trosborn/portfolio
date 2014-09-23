@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "Pundit limits projects privileges to admin" do
   scenario "admin can create projects" do

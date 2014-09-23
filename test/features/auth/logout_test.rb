@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "I want to end my session and logout" do
   scenario "I want to log out" do

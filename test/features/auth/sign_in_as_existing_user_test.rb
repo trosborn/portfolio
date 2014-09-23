@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "Auth::SignInAsExistingUser" do
   scenario "I login as an existing user" do

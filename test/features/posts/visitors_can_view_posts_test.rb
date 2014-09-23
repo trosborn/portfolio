@@ -1,4 +1,4 @@
-require "test_helper"
+require "helpers/test_helper"
 
 feature "visitors can read posts" do
   scenario "visitors can see the post index" do
