@@ -11,25 +11,31 @@
     </div>
   <% end %>
 
-  <%= form_for [@commentable, @comment] do |f| %>
-    <div class="field">
-      <%= f.label :author, "Name" %>
-      <%= f.text_field :author %>
-    </div>
-    <div class="field">
-      <%= f.label :author_email, "Email" %>
-      <%= f.text_field :author_email %>
-    </div>
-    <div class="field">
-      <%= f.label :author_url, "Website" %>
-      <%= f.text_field :author_url %>
-    </div>
-    <div class="field">
-      <%= f.label :content, "Comment" %>
-      <%= f.text_field :content %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Submit comment" %>
+  <% if current_user.present? %>
+    <%= form_for [@commentable, @comment] do |f| %>
+      <div class="field">
+        <%= f.label :author, "Name" %>
+        <%= f.text_field :author %>
+      </div>
+      <div class="field">
+        <%= f.label :author_email, "Email" %>
+        <%= f.text_field :author_email %>
+      </div>
+      <div class="field">
+        <%= f.label :author_url, "Website" %>
+        <%= f.text_field :author_url %>
+      </div>
+      <div class="field">
+        <%= f.label :content, "Comment" %>
+        <%= f.text_field :content %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Submit comment" %>
+      <div>
+    <% end %>
+  <% else %>
     <div>
+      <%= link_to("You must sign in to comment", new_user_session_path) %>
+    </div>
   <% end %>
 </div>
