@@ -13,25 +13,25 @@
   </head>
 
   <body>
-    <div class="row" id="top-bar">
-      <div class="large-3 columns">
-        <ul>
-          <li><%= link_to "Home", welcome_index_path, class: "button" %></li>
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
         </ul>
-    </div>
-    <div class="large-9 columns">
-      <div class="nav-bar-right">
-        <ul class="right button-group">
-          <li><%= link_to "Contact", new_contact_path, class: "button" %></li>
-          <li><%= link_to "Blog", posts_path, class: "button" %></li>
-          <li><%= link_to "Portfolio", projects_path, class: "button" %></li>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><%= link_to "Home", welcome_index_path %></li>
+            <li><%= link_to "Contact", new_contact_path, class: "button" %></li>
+            <li><%= link_to "Blog", posts_path, class: "button" %></li>
+            <li><%= link_to "Portfolio", projects_path, class: "button" %></li>
           <% if current_user.present? %>
             <li><%= link_to "Sign out", destroy_user_session_path, class: "button" %></li>
           <% else %>
             <li><%= link_to "Login", new_user_session_path, class: "button" %></li>
           <% end %>
-        </ul>
-      </div>
+          </ul>
+        </section>
+      </nav>
     </div>
     <% flash.each do |key, value| %>
       <div class="row">
