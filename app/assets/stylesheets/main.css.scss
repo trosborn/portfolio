@@ -13,3 +13,22 @@ button:a:active {
 li {
   list-style: none;
 }
+nav.top-bar {
+  text-align:center;
+}
+section.top-bar-section {
+  display: inline-block;
+}
+div.contain-to-grid {
+  height: 60px;
+}
+.name h1 a {
+  font-size: 24px;
+  vertical-align: text-bottom;
+  font-family: Tahoma;
+}
+.top-bar ul li a {
+  margin-top :10px;
+  margin-right: 2px;
+
+}
