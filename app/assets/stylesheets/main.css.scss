@@ -37,7 +37,15 @@ div.contain-to-grid {
   margin-right: auto;
   max-width: initial;
 }
-.large-12 {
-  margin: 0 auto;
-  text-align: center;
+.parallax-background {
+  position: fixed;
+  max-width: 100%;
+}
+.parallax-content {
+  max-width: 100%;
+  position: relative;
+  top: 500px;
+  padding: 50px;
+  font-size: 20px;
+  background-color: #fff;
 }
