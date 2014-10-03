@@ -1,31 +1,13 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr id="<%= dom_id(post) %>">
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <% if policy(post).update? %>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <% end %>
-        <% if policy(post).destroy? %>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
+<% @posts.each do |post| %>
+  <div class="post">
+    <div><%= post.title %></div>
+    <div><%= post.body.split('.').first %></div>
+    <div><%= link_to 'Show', post %></div>
+    <% if policy(post).update? %>
+      <div><%= link_to 'Edit', edit_post_path(post) %></div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+    <% if policy(post).destroy? %>
+      <div><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <% end %>
+  </div>
+<% end %>
