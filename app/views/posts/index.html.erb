@@ -1,21 +1,20 @@
-<div class="parallax-content">
-  <div class="row">
-    <div class="large-12 columns">
-    <% @posts.each do |post| %>
-      <div class="panel">
-        <div><h1><%= post.title %></h1></div>
-        <div><%= post.body.split('.').first %></div>
-        <div><%= link_to 'Show', post %></div>
-        <% if policy(post).update? %>
-          <div><%= link_to 'Edit', edit_post_path(post) %></div>
-        <% end %>
-        <% if policy(post).destroy? %>
-          <div><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        <% end %>
-      </div>
-      </br>
-      </br>
-    <% end %>
+
+<div class="row">
+  <div class="large-12 columns">
+  <% @posts.each do |post| %>
+    <div class="panel">
+      <div><h1><%= post.title %></h1></div>
+      <div><%= post.body.split('.').first %></div>
+      <div><%= link_to 'Show', post %></div>
+      <% if policy(post).update? %>
+        <div><%= link_to 'Edit', edit_post_path(post) %></div>
+      <% end %>
+      <% if policy(post).destroy? %>
+        <div><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <% end %>
     </div>
+    </br>
+    </br>
+  <% end %>
   </div>
 </div>

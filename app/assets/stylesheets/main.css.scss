@@ -10,26 +10,31 @@ button:a:hover {
 button:a:active {
   color: #333333;
 }
-li {
+#header ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
-nav.top-bar {
-  text-align:center;
+#header li {
+  display: inline;
+  border: solid;
+  border-width: 1px 1px 0 1px;
+  margin: 0 0.5em 0 0;
 }
-section.top-bar-section {
-  display: inline-block;
+#header li a {
+  padding: 0 1em;
 }
-div.contain-to-grid {
-  height: 60px;
+#content {
+  border: 1px solid;
+}
+#header #selected {
+  padding-bottom: 1px;
+  background: white;
 }
 .name h1 a {
   font-size: 24px;
   vertical-align: text-bottom;
   font-family: Tahoma;
-}
-.top-bar ul li a {
-  margin-top :10px;
-  margin-right: 2px;
 }
 .fullWidth {
   width: 100%;
@@ -44,18 +49,10 @@ div.contain-to-grid {
   background: url(http://ad009cdnb.archdaily.net/wp-content/uploads/2014/04/53476c3dc07a80ef9f000035_pagliacci-pizza-floisand-studio_front_elevation.jpg);
   background-size: 100% auto;
 }
-.parallax-index {
-  max-width: 100%;
-  position: relative;
-  top: 500px;
-  padding: 50px;
-  font-size: 20px;
-  background-color: #fff;
-}
 .parallax-content {
   max-width: 100%;
   position: relative;
-  top: 100px;
+  top: 500px;
   padding: 50px;
   font-size: 20px;
   background-color: #fff;
@@ -67,9 +64,4 @@ div.contain-to-grid {
   font-weight: 700;
   color: #b3b3b1;
   letter-spacing: .1em;
-}
-
-.transparent {
-  background:#7f7f7f;
-  background:rgba(255,255,255,0.5);
 }
