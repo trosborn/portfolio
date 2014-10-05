@@ -57,11 +57,17 @@ button:a:active {
   font-size: 20px;
   background-color: #fff;
 }
-
 #about {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
   color: #b3b3b1;
   letter-spacing: .1em;
+}
+.tabs {
+  top: 500px;
+  position: relative;
+}
+ul {
+  background-color: transparent !important;
 }

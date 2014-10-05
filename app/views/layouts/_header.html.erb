@@ -1,13 +1,3 @@
-<header>
-  </ul>
-      <li><%= link_to "Home", welcome_index_path %></li>
-      <li><%= link_to "Contact", new_contact_path %></li>
-      <li><%= link_to "Blog", posts_path %></li>
-      <li><%= link_to "Portfolio", projects_path %></li>
-    <% if current_user.present? %>
-      <li><%= link_to "Sign out", destroy_user_session_path %></li>
-    <% else %>
-      <li><%= link_to "Login", new_user_session_path %></li>
-    <% end %>
-  </ul>
-</header>
+
+
+
