@@ -57,4 +57,13 @@ Tabulous.setup do
     # render_subtabs_when_empty false
 
   end
+
+  use_css_scaffolding do
+    background_color '#ccc'
+    text_color '#444'
+    active_tab_color '#fff'
+    hover_tab_color '#ddd'
+    inactive_tab_color '#aaa'
+    inactive_text_color '#888'
+  end
 end
