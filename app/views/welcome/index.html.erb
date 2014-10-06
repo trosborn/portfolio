@@ -10,8 +10,9 @@
 <div class="row">
   <div class="large-4 columns">
     <img src="http://placehold.it/400x300&text=[img]"/>
-    <h4><%= Post.first.title %></h4>
-    <p><%= Post.first.body.split('.').first %></p>
+    <% post = Post.first %>
+    <h4><%= post.title %></h4>
+    <p><%= preview(post) %></p>
   </div>
 
   <div class="large-4 columns">
