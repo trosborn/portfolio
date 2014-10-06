@@ -2,29 +2,20 @@
 
 {<img src="https://travis-ci.org/trosborn/portfolio.png?branch=master" alt="Build Status" />}[https://travis-ci.org/trosborn/portfolio]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby 2.0.0
 
-Things you may want to cover:
+Setup:
+Run bundle install
 
-* Ruby version
+Config environment variables
 
-* System dependencies
+Rake db:setup
 
-* Configuration
+Running Tests:
+rake minitest:features
 
-* Database creation
+Deploying:
 
-* Database initialization
+Precompile assets
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
