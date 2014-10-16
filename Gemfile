@@ -29,7 +29,6 @@ gem 'sidekiq'
 gem 'font-awesome-rails'
 gem 'mail_form'
 gem 'simple_form'
-gem 'tabulous'
 
 group :doc do
   gem 'sdoc', require: false
