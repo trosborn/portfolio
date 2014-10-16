@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "UW Portfolio" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Portfolio" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -24,7 +24,13 @@
     <% end %>
 
     <div class="parallax-background"></div>
-
+    <div id="session">
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, class: "button" %>
+        <% else %>
+        <%= link_to "Register", new_user_registration_path, class: "button" %>
+        <% end %>
+    </div>
     <div class="row">
       <div class="large-12 columns">
           <%= tabs %>
