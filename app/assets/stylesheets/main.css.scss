@@ -52,7 +52,7 @@ button:a:active {
 .parallax-content {
   max-width: 100%;
   position: relative;
-  top: 500px;
+  top: 450px;
   padding: 50px;
   font-size: 20px;
   background-color: #fff;
@@ -64,13 +64,14 @@ button:a:active {
   color: #b3b3b1;
   letter-spacing: .1em;
 }
-.tabs {
+#tabs {
   top: 500px;
   position: relative;
 }
 ul {
   background-color: transparent !important;
+  list-style: none;
 }
-.tabs ul {
-  padding: 0 0 0 0px !important;
+ul li {
+  display: inline;
 }

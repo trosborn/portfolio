@@ -1,3 +1,10 @@
-
-
-
+<ul id="tabs">
+  <li><%= link_to "About", welcome_index_path, class: "button" %></li>
+  <li><%= link_to "Blog", posts_path, class: "button" %></li>
+  <li><%= link_to "Portfolio", projects_path, class: "button" %></li>
+  <li><% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, class: "button" %>
+    <% else %>
+  <li><%= link_to "Sign In", new_user_session_path, class: "button" %></li>
+  <% end %></li>
+</ul>
