@@ -7,7 +7,7 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @post.body %>
+  <%= @post.body.html_safe %>
 </p>
 
 <p>
@@ -23,7 +23,10 @@
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<% if policy(@post).update? %>
+  <div><%= link_to 'Edit', edit_post_path(@post) %></div>
+<% end %>
+
 <%= link_to 'Back', posts_path %>
 
 <% if policy(@post).update? %>
