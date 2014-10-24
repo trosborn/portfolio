@@ -31,6 +31,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'coderay'
+gem 'foundation-social-web-icons-rails', git: "git://github.com/jclusso/foundation-social-web-icons-rails.git"
 
 group :doc do
   gem 'sdoc', require: false
