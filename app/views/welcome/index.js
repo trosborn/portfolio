@@ -1,1 +1,1 @@
-$(".social a").switcher();
+$(".social li a").switcher();
