@@ -2,9 +2,11 @@
   <div class="large-12 columns">
   <% @posts.each do |post| %>
     <div class="panel">
-      <div><h1><%= post.title %></h1></div>
-      <div><%= preview(post) %></div>
-      <div><%= link_to 'Show', post %></div>
+      <div><h1 class="post-title"><%= post.title %></h1></div>
+      <div class="post-index">
+        <%= markdown(preview(post)) %>
+        <%= link_to 'Read more', post %>
+      </div>
       <% if policy(post).update? %>
         <div><%= link_to 'Edit', edit_post_path(post) %></div>
       <% end %>
@@ -17,3 +19,4 @@
   <% end %>
   </div>
 </div>
+

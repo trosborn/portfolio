@@ -1,18 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<p class="post-title">
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
   <%= markdown(@post.body) %>
 </p>
 
 <p>
   <%= image_tag @post.image_url.to_s %>
 </p>
+
+<% if policy(@post).update? %>
+  <%= link_to "Destroy", @post, method: :delete, data: {confirm: "Click to confirm deletion"} %>
+<% end %>
+
+<% if policy(@post).update? %>
+  <div><%= link_to 'Edit', edit_post_path(@post) %></div>
+<% end %>
 
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
@@ -23,14 +29,6 @@
   </p>
 <% end %>
 
-<% if policy(@post).update? %>
-  <div><%= link_to 'Edit', edit_post_path(@post) %></div>
-<% end %>
-
 <%= link_to 'Back', posts_path %>
-
-<% if policy(@post).update? %>
-  <%= link_to "Destroy", @post, method: :delete, data: {confirm: "Click to confirm deletion"} %>
-<% end %>
 
 <%= render "comments/form" %>
