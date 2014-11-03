@@ -5,7 +5,8 @@ class Post < ActiveRecord::Base
 
   scope :published, -> { where(published: true) }
 
-  mount_uploader :image, ImageUploader
+  has_many :post_attachments
+  accepts_nested_attributes_for :post_attachments
 
   def self.create_from_postmark mitt
     api_token = mitt.from #.split("@").first.split("+").last

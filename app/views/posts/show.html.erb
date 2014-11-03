@@ -6,9 +6,10 @@
   <%= markdown(@post.body) %>
 </p>
 
-<p>
-  <%= image_tag @post.image_url.to_s %>
-</p>
+<% @post_attachments.each do |p| %>
+  <%= image_tag p.image_url %>
+  <%= link_to "Edit Attachment", edit_post_attachment_path(p) %>
+<% end %>
 
 <% if policy(@post).update? %>
   <%= link_to "Destroy", @post, method: :delete, data: {confirm: "Click to confirm deletion"} %>
