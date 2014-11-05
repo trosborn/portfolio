@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     @commentable = @post
     @comments = @commentable.comments
     @comment = Comment.new
-    @post_attachments = @post.post_attachments.all
+    @post_attachments = @post.post_attachments.load
   end
 
   def new

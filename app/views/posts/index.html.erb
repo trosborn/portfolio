@@ -4,7 +4,7 @@
     <div class="panel">
       <div><h1 class="post-title"><%= post.title %></h1></div>
       <div class="post-index">
-        <%= markdown(preview(post)) %>
+        <%= preview(post) %>
         <%= link_to 'Read more', post %>
       </div>
       <% if policy(post).update? %>
