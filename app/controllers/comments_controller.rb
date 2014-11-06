@@ -29,10 +29,10 @@ class CommentsController < ApplicationController
     end
   end
 
-  private
+private
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:author, :author_email, :author_url, :content)
   end
 
   def load_commentable

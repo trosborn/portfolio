@@ -1,5 +1,7 @@
 Portfolio::Application.routes.draw do
 
+  resources :post_attachments
+
   namespace :api do
     namespace :v1 do
       resources :posts, :only => [ :create ]

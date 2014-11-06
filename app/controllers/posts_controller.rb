@@ -11,10 +11,12 @@ class PostsController < ApplicationController
     @commentable = @post
     @comments = @commentable.comments
     @comment = Comment.new
+    @post_attachments = @post.post_attachments.load
   end
 
   def new
     @post = Post.new
+    @post_attachment = @post.post_attachments.build
   end
 
   def edit
@@ -26,6 +28,9 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        params[:post_attachments]['image'].each do |a|
+          @post_attachment = @post.post_attachments.create!(:image => a, :post_id => @post.id)
+        end
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
@@ -41,6 +46,13 @@ class PostsController < ApplicationController
     authorize @post
     respond_to do |format|
       if @post.update(post_params)
+        if params[:post_attachments] && params[:post_attachments]['image']
+          @post.post_attachments.delete_all
+
+          params[:post_attachments]['image'].each do |a|
+            @post_attachment = @post.post_attachments.create!(:image => a, :post_id => @post.id)
+          end
+        end
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
@@ -64,6 +76,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :image, (:published if PostPolicy.new(current_user, @post).publish?))
+      params.require(:post).permit(:title, :body, (:published if PostPolicy.new(current_user, @post).publish?), post_attachments_attributes: [:id, :post_id, :image])
     end
 end
