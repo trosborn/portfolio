@@ -1,7 +1,7 @@
 language: ruby
 rvm:
 - 2.0.0
-script: rake minitest:features
+script: bundle exec rake minitest:features
 deploy:
   provider: heroku
   app: obscure-crag-6658
