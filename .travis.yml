@@ -1,6 +1,7 @@
 language: ruby
 rvm:
 - 2.0.0
+script: "./run-tests.sh"
 deploy:
   provider: heroku
   app: obscure-crag-6658
