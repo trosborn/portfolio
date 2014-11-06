@@ -76,6 +76,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :image, (:published if PostPolicy.new(current_user, @post).publish?), post_attachments_attributes: [:id, :post_id, :image])
+      params.require(:post).permit(:title, :body, (:published if PostPolicy.new(current_user, @post).publish?), post_attachments_attributes: [:id, :post_id, :image])
     end
 end
