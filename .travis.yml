@@ -1,6 +1,7 @@
 language: ruby
 rvm:
 - 2.0.0
+services: redis
 script: bundle exec rake minitest:features
 deploy:
   provider: heroku
