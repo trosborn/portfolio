@@ -28,6 +28,8 @@ Portfolio::Application.routes.draw do
 
   resources :messages
 
+  resources :images
+
   get 'welcome/index'
 
   root 'welcome#index'
