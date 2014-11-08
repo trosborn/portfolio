@@ -8,7 +8,7 @@ feature "visitors can read posts" do
   end
   scenario "visitors can see the post show page" do
     visit posts_path
-    click_link('Show', :match => :first )
+    click_link('Read more', :match => :first )
     page.must_have_content "Aminoize"
   end
 end
