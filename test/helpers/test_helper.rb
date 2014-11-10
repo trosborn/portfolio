@@ -3,6 +3,7 @@ require File.expand_path("../../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails/capybara"
 require "minitest/pride"
+include ActionDispatch::TestProcess
 
 class ActiveSupport::TestCase
   fixtures :all

@@ -40,10 +40,6 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
-    carrierwave_direct (0.0.14)
-      carrierwave
-      fog
-      uuidtools
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.1.0)
@@ -227,7 +223,6 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    uuidtools (2.1.5)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -238,7 +233,6 @@ PLATFORMS
 
 DEPENDENCIES
   carrierwave
-  carrierwave_direct
   coderay
   coffee-rails (~> 4.0.0)
   devise

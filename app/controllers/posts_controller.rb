@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy, :preview]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -22,8 +22,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    authorize @post
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -38,7 +36,6 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    authorize @post
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }

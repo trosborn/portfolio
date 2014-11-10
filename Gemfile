@@ -31,7 +31,6 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'coderay'
-gem 'carrierwave_direct'
 
 group :doc do
   gem 'sdoc', require: false

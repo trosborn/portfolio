@@ -1,21 +1,8 @@
-<h1>Listing image</h1>
-
 <table>
-  <thead>
-    <tr>
-      <th>Post</th>
-      <th>Image</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
   <tbody>
-    <% @image.each do |image| %>
+    <% @images.each do |image| %>
       <tr>
-        <td><%= image.post_id %></td>
-        <td><%= image.image %></td>
+        <td><%= image.body %></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
