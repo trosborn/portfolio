@@ -15,14 +15,13 @@
 
     <div class="parallax-background"></div>
 
-    <div class="row">
-      <div class="large-12 columns">
-        <%= render "layouts/header" %>
-        <div class="parallax-content">
-          <%= render "layouts/messages" %>
-          <%= yield %>
-          <%= render "layouts/footer" %>
-        </div>
+
+    <div class="large-12 columns no-pad-right no-pad-left">
+      <%= render "layouts/header" %>
+      <div class="parallax-content">
+        <%= render "layouts/messages" %>
+        <%= yield %>
+        <%= render "layouts/footer" %>
       </div>
     </div>
   </body>
