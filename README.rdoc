@@ -2,6 +2,9 @@
 
 {<img src="https://travis-ci.org/trosborn/portfolio.png?branch=master" alt="Build Status" />}[https://travis-ci.org/trosborn/portfolio]
 
+Class project for UW Rails Certificate program. You may visit this website at www.trosborn.com. **It will take at least 20 seconds to load intially as I do not keep any dynos on Heroku running**
+
+
 Ruby 2.0.0
 
 Setup:
@@ -9,13 +12,9 @@ Run bundle install
 
 Config environment variables
 
-Rake db:setup
+Setup the database (rake db:migrate)
 
-Running Tests:
+Running Tests with minitest/capybara:
 rake minitest:features
 
-Deploying:
-
-Precompile assets
-
-<tt>rake doc:app</tt>.
+After working on the frontend, precompile assets before final commit
