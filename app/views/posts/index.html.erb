@@ -1,22 +1,40 @@
 <div class="row">
   <div class="large-12 columns">
-  <% @posts.each do |post| %>
-    <div class="panel">
-      <div><h1 class="post-title"><%= post.title %></h1></div>
-      <div class="post-index">
-        <%= preview(post) %>
-        <%= link_to 'Read more', post %>
-      </div>
-      <% if policy(post).update? %>
-        <div><%= link_to 'Edit', edit_post_path(post) %></div>
-      <% end %>
-      <% if policy(post).destroy? %>
-        <div><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-      <% end %>
+    <div class="nav-bar right">
+      <ul class="button-group">
+        <li><%= link_to "About", welcome_index_path, class: "button" %></li>
+        <li><%= link_to "Blog", posts_path, class: "button" %></li>
+        <li><%= link_to "Portfolio", projects_path, class: "button" %></li>
+        <li><% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, class: "button" %>
+        <% else %>
+          <li><%= link_to "Sign In", new_user_session_path, class: "button" %></li>
+        <% end %></li>
+      </ul>
     </div>
-    </br>
-    </br>
-  <% end %>
+    <h1>Blog <small>This is my blog. It's awesome.</small></h1>
+    <hr/>
   </div>
+</div>
+
+<div class="row">
+  <%= render 'posts' %>
+  </div>
+  <aside class="large-3 columns">
+    <h5>Categories</h5>
+    <ul class="side-nav">
+      <li><a href="#">News</a></li>
+      <li><a href="#">Code</a></li>
+      <li><a href="#">Design</a></li>
+      <li><a href="#">Fun</a></li>
+      <li><a href="#">Weasels</a></li>
+    </ul>
+
+    <div class="panel">
+      <h5>Featured</h5>
+      <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </aside>
 </div>
 
