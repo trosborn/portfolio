@@ -1,3 +1,4 @@
+</br>
 <div class="row">
   <div class="large-12 columns">
     <div class="panel">
@@ -6,28 +7,23 @@
     </div>
   </div>
 </div>
-<br>
 <div class="row">
   <div class="large-4 columns">
-    <% post = Post.first %>
-    <%= link_to image_tag('travis-ci.jpeg'), post %>
-    <h4><%= post.title %></h4>
-    <p>
-      <%= preview(post) + '.' %>
-      <%= link_to 'Read more', post %>
-    </p>
+    <%= image_tag('cherry-blossoms.jpg') %>
+    <h4>Education</h4>
+    <p>I graduated from the University of Washington with a B.A. in English literature in 2012. Essentially, my degree was a practice in empathy, and I'd like to find a a career in web development where I can apply my excellent communication skills.</p>
   </div>
 
   <div class="large-4 columns">
-    <img src="http://placehold.it/400x300&text=[img]"/>
-    <h4>This is a content section.</h4>
-    <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+  <%= image_tag('bruce-rails.jpg') %>
+    <h4>Rails</h4>
+    <p>Bruce Lee believed no martial art contained all the answers, and I believe the same thing about writing code. While I'm partial to working with Ruby and Rails, I'm open to learning whatever tool is best for the job.</p>
   </div>
 
   <div class="large-4 columns">
-    <img src="http://placehold.it/400x300&text=[img]"/>
-    <h4>This is a content section.</h4>
-    <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+    <%= image_tag('tdd-everything.jpg') %>
+    <h4>Best Practices</h4>
+    <p>TDD/BDD, continuous integration, code reviews and agile development are important to me. I want to work under the tutleage of experienced developers who can get me on the path to writing beautiful code using best practices. </p>
   </div>
 </div>
 
@@ -39,7 +35,7 @@
 
       <div class="row">
         <div class="large-9 columns">
-          <p>I'd love to hear from you, you attractive person you.</p>
+          <p>If you think I'd be a good fit for your company, I'd love to hear from you!</p>
         </div>
         <div class="large-3 columns">
           <a><%= link_to "Contact Me", new_message_path, class: "button" %></a>
