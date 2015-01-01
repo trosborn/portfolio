@@ -2,9 +2,8 @@ require "helpers/test_helper"
 
 feature "Account access" do
   scenario "I login as an existing user" do
-    visit root_path
+    visit user_session_path
 
-    click_on "Sign In"
     fill_in "Email", with: "email@example.com"
     fill_in "Password", with: "password"
 
@@ -16,7 +15,7 @@ feature "Account access" do
   scenario "I want to sign out" do
 
     sign_in
-    click_on "Sign Out"
+    visit destroy_user_session_path
     page.must_have_content "success"
   end
   scenario "I want to create a new account" do
@@ -33,7 +32,7 @@ feature "Account access" do
   end
   scenario "sign in with twitter works" do
     visit root_path
-    click_on "Sign In"
+    visit new_user_session_path
     OmniAuth.config.test_mode = true
     Capybara.current_session.driver.request.env['devise.mapping'] = Devise.mappings[:user]
     Capybara.current_session.driver.request.env['omniauth.auth'] = OmniAuth.config.mock_auth[:twitter]
@@ -43,6 +42,6 @@ feature "Account access" do
                           })
     click_on "Sign in with Twitter"
 
-    page.must_have_content "Sign Out"
+    page.must_have_content "Signed in!"
   end
 end
