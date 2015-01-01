@@ -18,11 +18,5 @@ feature "Comment approval" do
   end
 
   scenario "comments are displayed after approval" do
-    click_on "Sign Out"
-    sign_in(:admin)
-    visit post_comments_path(posts(:aminoize))
-    click_on "Approve"
-
-    page.must_have_content "To succeed in life"
   end
 end

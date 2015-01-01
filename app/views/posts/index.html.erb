@@ -1,25 +1,6 @@
 <div class="row">
-  <div class="large-12 columns">
-    <div class="nav-bar right">
-      <ul class="button-group">
-        <li><%= link_to "About", welcome_index_path, class: "button" %></li>
-        <li><%= link_to "Blog", posts_path, class: "button" %></li>
-        <li><%= link_to "Portfolio", projects_path, class: "button" %></li>
-        <li><% if user_signed_in? %>
-          <%= link_to "Sign Out", destroy_user_session_path, class: "button" %>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path, class: "button" %></li>
-        <% end %></li>
-      </ul>
-    </div>
-    <h1>Blog <small>This is my blog. It's awesome.</small></h1>
-    <hr/>
-  </div>
-</div>
-
-<div class="row">
   <%= render 'posts' %>
-  </div>
+</div>
   <aside class="large-3 columns">
     <h5>Categories</h5>
     <ul class="side-nav">

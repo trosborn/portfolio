@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "UW Portfolio" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Thomas Osborn | Web Developer" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
@@ -13,10 +13,13 @@
     <%= csrf_meta_tags %>
   <body>
 
-    <div class="large-12 columns no-pad-right no-pad-left">
-      <%= render "layouts/messages" %>
-      <%= yield %>
-      <%= render "layouts/footer" %>
+    <div class="row">
+      <div class="large-12 columns">
+        <%= render "layouts/header" %>
+        <%= render "layouts/messages" %>
+        <%= yield %>
+        <%= render "layouts/footer" %>
+      </div>
     </div>
   </body>
 </html>
