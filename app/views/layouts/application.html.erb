@@ -9,7 +9,7 @@
 
 
     <%= stylesheet_link_tag    "application" %>
-    <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -19,6 +19,7 @@
     <div class="row">
       <div class="large-12 columns">
         <%= render "layouts/header" %>
+        </br>
         <%= render "layouts/messages" %>
         <%= yield %>
         <%= render "layouts/footer" %>
