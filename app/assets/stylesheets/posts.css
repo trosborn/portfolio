@@ -4,9 +4,6 @@
   font-weight: bold;
   text-align: center;
 }
-.post-index {
-  text-align: center;
-}
 .CodeRay {
   background-color: gray;
   border: 1px solid black;
@@ -20,6 +17,10 @@
 .CodeRay pre {
   margin: 0px;
   padding: 0px;
+}
+.lato {
+  font-family: 'Lato', latin, latin-ext;
+  color: #008cba;
 }
 
 .CodeRay .an { color:#E7BE69 }                      /* html attribute */
