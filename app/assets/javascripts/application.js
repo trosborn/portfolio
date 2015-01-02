@@ -15,4 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
+//= require modernizr.custom
 
+
+$(function(){ $(document).foundation(); });
