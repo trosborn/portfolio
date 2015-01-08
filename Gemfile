@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-group :development do
-  gem "sqlite3"
-end
-
 group :test do
   gem "minitest-rails-capybara"
   gem "launchy"
@@ -31,18 +27,19 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'coderay'
+gem 'carrierwave'
+gem 'fog'
+gem 'pg'
 
 group :doc do
   gem 'sdoc', require: false
 end
 
-group :production do
-  gem 'rails_12factor'
-  gem 'pg'
-end
+gem 'rails_12factor', :group => :production
+
+
 ruby "2.0.0"
 
-gem 'carrierwave'
-gem 'fog'
+
 
 gem 'rake', '10.3.2'
