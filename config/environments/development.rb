@@ -8,7 +8,7 @@ Portfolio::Application.configure do
   config.active_support.deprecation = :log
   config.action_mailer.delivery_method = :letter_opener
   config.active_record.migration_error = :page_load
-  config.assets.debug = true
+  config.assets.debug = false
   config.serve_static_assets = true
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
