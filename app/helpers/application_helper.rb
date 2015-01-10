@@ -1,6 +1,13 @@
+require 'twitter-text'
 module ApplicationHelper
+  include Twitter::Autolink
 
-  def flash_class(level)
+  def twitter_text text
+    text = auto_link(text)
+    text ? text.html_safe : ''
+  end
+
+  def flash_class level
     case level
       when :notice then "info"
       when :success then "success"
@@ -9,13 +16,7 @@ module ApplicationHelper
     end
   end
 
-class CodeRayify < Redcarpet::Render::HTML
-  def block_code(code, language)
-    CodeRay.scan(code, language).div(:line_numbers => :table)
-  end
-end
-
-  def markdown(text)
+  def markdown text
     coderayified = CodeRayify.new(:filter_html => true,
                                   :hard_wrap => true)
     options = {
@@ -29,4 +30,12 @@ end
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
+
+  class CodeRayify < Redcarpet::Render::HTML
+    def block_code code, language
+      CodeRay.scan(code, language).div(:line_numbers => :table)
+    end
+  end
+
+
 end

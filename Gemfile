@@ -30,6 +30,8 @@ gem 'coderay'
 gem 'carrierwave'
 gem 'fog'
 gem 'pg'
+gem 'twitter'
+gem 'twitter-text'
 
 group :doc do
   gem 'sdoc', require: false

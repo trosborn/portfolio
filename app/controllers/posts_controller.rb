@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
+  include TwitterModule
+
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @tweets = @@client.user_timeline[0..9]
+
     @posts = Post.all
   end
 

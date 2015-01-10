@@ -1,11 +1,10 @@
-
-  <article>
-    <% @posts.each do |post| %>
-      <h3><%= link_to post.title, post , class: "lato" %></h3>
-      <h5>
-        <%= "#{post.created_at.strftime("%d %b. %Y")}" %>
-        <%= ", #{post.comments.count} comments " %>
-      </h5>
+<article>
+  <% @posts.each do |post| %>
+    <h3><%= link_to post.title, post , class: "lato" %></h3>
+    <h5>
+      <%= "#{post.created_at.strftime("%d %b. %Y")}" %>
+      <%= ", #{post.comments.count} comments " %>
+    </h5>
     <div class="row">
       <div class="large-12 columns">
         <p>
@@ -13,5 +12,5 @@
         </p>
       </div>
     </div>
-  </article>
-<% end %>
+  <% end %>
+</article>
