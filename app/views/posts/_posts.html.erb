@@ -1,7 +1,7 @@
 <div class="large-8 columns" role="content">
   <article>
     <% @posts.each do |post| %>
-      <h3><%= link_to post.title, post , class: "lato" %></h3>
+      <h3><%= link_to post.title, post, class: "lato" %></h3>
       <h5>
         <%= "#{post.created_at.strftime("%d %b. %Y")}" %>
         <%= ", #{post.comments.count} comments " %>
