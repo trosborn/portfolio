@@ -7,10 +7,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "Thomas Osborn | Web Developer" %></title>
     <%= favicon_link_tag 'sto.ico' %>
 
-
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" %>
-    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -24,5 +22,7 @@
         <%= render "layouts/footer" %>
       </div>
     </div>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
   </body>
 </html>
