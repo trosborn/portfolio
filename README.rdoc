@@ -19,10 +19,3 @@ rake minitest:features
 
 After working on the frontend, precompile assets before final commit
 
-Sites and images I borrow heavily from:
-
-http://2.bp.blogspot.com/_iN7r3INLF-4/SLcSjnFGUSI/AAAAAAAACXM/L8Jmp-2jULs/s400/cherry+blossoms.jpg
-http://static6.businessinsider.com/image/4df11185ccd1d59975070000-480/bruce-rails.jpg
-http://cdn.meme.am/instances/55794716.jpg
-
-http://www.korenlc.com/
