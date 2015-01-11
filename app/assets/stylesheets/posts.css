@@ -1,6 +1,5 @@
 .CodeRay {
   background-color: gray;
-  border: 1px solid black;
   font-family: 'Courier New', 'Terminal', monospace;
   color: #E6E0DB;
   padding: 3px 5px;
@@ -14,12 +13,11 @@
   color: #008cba;
 }
 
-.CodeRay {
+/*.CodeRay {
   background-color: #efefef;
   font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   color: #000;
-  margin-bottom: 14px;
-}
+}*/
 
 .CodeRay pre {
   margin: 0px;
