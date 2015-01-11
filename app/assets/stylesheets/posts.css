@@ -1,23 +1,17 @@
-.CodeRay {
-  background-color: gray;
-  font-family: 'Courier New', 'Terminal', monospace;
-  color: #E6E0DB;
-  padding: 3px 5px;
-  overflow: auto;
-  font-size: 12px;
-  margin: 12px 0;
-}
-
 .lato {
   font-family: 'Lato', latin, latin-ext;
   color: #008cba;
 }
 
-/*.CodeRay {
+.CodeRay {
   background-color: #efefef;
-  font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  font-family: 'Courier New', 'Terminal', monospace;
   color: #000;
-}*/
+  padding: 3px 5px;
+  overflow: auto;
+  font-size: 12px;
+  margin: 12px 0;
+}
 
 .CodeRay pre {
   margin: 0px;
