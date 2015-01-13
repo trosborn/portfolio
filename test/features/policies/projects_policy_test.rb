@@ -23,6 +23,7 @@ feature "Pundit limits projects privileges to admin" do
     test_project = projects(:portfolio)
     visit project_path(test_project)
     click_link('Destroy')
+
     page.wont_have_content "meta"
   end
 

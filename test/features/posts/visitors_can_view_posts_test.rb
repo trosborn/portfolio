@@ -9,6 +9,7 @@ feature "visitors can read posts" do
   scenario "visitors can see the post show page" do
     visit posts_path
     click_link('Aminoize', :match => :first )
+
     page.must_have_content "Aminoize is the best site"
   end
 end
