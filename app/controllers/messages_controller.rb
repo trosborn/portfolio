@@ -6,11 +6,14 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(params[:message])
+
     if @message.valid?
-      flash[:notice] = "Message sent!"
-      redirect_to root_url
+      MessagesMailer.new_message(@message).deliver
+      redirect_to(root_path, :notice => "Message was successfully sent.")
     else
-      render :action => 'new'
+      flash.now.alert = "Please fill all fields."
+      render :new
     end
   end
+
 end
