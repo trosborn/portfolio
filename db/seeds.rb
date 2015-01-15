@@ -1,8 +1,9 @@
+require 'open-uri'
 5.times do |i|
   Project.create!(
     name: "Project #{i}",
     technologies_used: "Rails (duh)",
-    image: open("http://www.japanfocus.org/data/2.south_kwaj.jpg")
+    image: open("../../desktop/India_Gate_600x400.jpg")
     )
   Post.create(
     title: "Post #{i.to_s + "Aminoize"}",
