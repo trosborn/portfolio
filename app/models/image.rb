@@ -1,3 +1,5 @@
 class Image < ActiveRecord::Base
-  mount_uploader :body, ImageUploader
+  belongs_to :project
+
+
 end
