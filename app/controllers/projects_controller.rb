@@ -35,6 +35,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @image = @project
     @commentable = @project
     @comments = @commentable.comments
     @comment = Comment.new
@@ -60,12 +61,11 @@ class ProjectsController < ApplicationController
   end
 
 private
-
   def set_project
     @project = Project.find(params[:id])
   end
 
   def project_params
-    params.require(:project).permit(:name, :technologies_used)
+    params.require(:project).permit(:name, :technologies_used, :image)
   end
 end
