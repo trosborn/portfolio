@@ -1,7 +1,7 @@
 <div class="grid">
   <% @projects.each do |project| %>
     <div class="large-4 columns">
-      <a href="<%= project %>">
+      <a href="<%= project.id %>">
         <figure>
           <%= image_tag project.image_url(:preview).to_s %>
           <figcaption><p>
@@ -10,6 +10,7 @@
           </p></figcaption>
         </figure>
       </a>
+      </br>
     </div>
   <% end %>
 </div>

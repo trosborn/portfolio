@@ -12,7 +12,6 @@ feature "Pundit limits projects privileges to admin" do
     click_on "Create Project"
 
     page.text.must_include "meta"
-
   end
 
   scenario "post is deleted with a click" do
