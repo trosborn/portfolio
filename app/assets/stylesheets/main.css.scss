@@ -1,13 +1,13 @@
 a { color: #6d6d6d; }
 
-body {
- border-top: 7px solid #008cba;
-}
+body { border-top: 7px solid #008cba; }
 
 #align-right { text-align: right; }
 
 #underline { border-bottom: 4px solid gray; }
 #thinline { border-bottom: 2px solid gray; }
+
+.uppercase { text-transform: uppercase; }
 
 #topbar {
   text-align: center;
@@ -35,3 +35,11 @@ body {
   border-bottom: 2px solid gray;
 }
 
+.center {
+  text-align: center;
+}
+
+.lato {
+  font-family: 'Lato', latin, latin-ext;
+  color: #008cba;
+}
