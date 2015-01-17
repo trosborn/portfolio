@@ -66,6 +66,6 @@ private
   end
 
   def project_params
-    params.require(:project).permit(:name, :technologies_used, :image)
+    params.require(:project).permit(:name, :technologies_used, :image, :url, :description)
   end
 end
