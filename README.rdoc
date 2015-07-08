@@ -2,7 +2,7 @@
 
 {<img src="https://travis-ci.org/trosborn/portfolio.png?branch=master" alt="Build Status" />}[https://travis-ci.org/trosborn/portfolio]
 
-Class project for UW Rails Certificate program. You may visit this website at www.trosborn.com. 
+Class project for UW Rails Certificate program. 
 
 Ruby 2.0.0
 
